@@ -4,109 +4,121 @@ function get_sets()
 	sets.precast = {}
 	
 	sets.precast.song = {
-		range="Angel Lyre+1",
-		head="Aoidos' Caolt +1",
-		neck="Aoidos' Matiniee",
-		ear1="Loquac. Earring",
-		body="Sha'ir Manteel",
-		hands="Wayfarer Cuffs",
-		ring2="Prolix Ring",
-		back="Twilight Cape",
-		waist="Aoidos' Belt",
-		legs="Aeto. Trousers",
-		feet="Bihu Slippers +1"}
+		range = "Angel Lyre+1",
+		head = "Aoidos' Caolt +1",
+		neck = "Aoidos' Matiniee",
+		ear1 = "Loquac. Earring",
+		body = "Sha'ir Manteel",
+		hands = "Wayfarer Cuffs",
+		ring2 = "Prolix Ring",
+		back = "Twilight Cape",
+		waist = "Aoidos' Belt",
+		legs = "Aeto. Trousers",
+		feet = "Bihu Slippers +1"}
 
 	--Midcast sets
 	sets.midcast = {}
 	
 	sets.midcast.song = {
-		head="Aoidos' Calot +1",
-		neck="Aoidos' Matiniee",
-		ear1="Loquac. Earring",
-		body="Fili Hongreline",
-		hands="Fili Manchettes",
-		ring1="Prolix Ring",
-		ring2="Carb. Ring",
-		back="Twilight Cape",
-		waist="Gleeman's Belt",
-		legs="Fili Rhingrave",
-		feet="Bihu Slippers +1"}
+		head = "Aoidos' Calot +1",
+		neck = "Aoidos' Matiniee",
+		ear1 = "Loquac. Earring",
+		body = "Fili Hongreline",
+		hands = "Fili Manchettes",
+		ring1 = "Prolix Ring",
+		ring2 = "Carb. Ring",
+		back = "Twilight Cape",
+		waist = "Gleeman's Belt",
+		legs = "Fili Rhingrave",
+		feet = "Bihu Slippers +1"}
 		
 	-- Midcast Songs
-	sets.midcast.ballad = {legs="Fili Rhingrave"}
-	sets.midcast.mazurka = {range="Vihuela"}
-	sets.midcast.elegy = {range="Syrinx"}
-	sets.midcast.minne = {range="Syrinx"}
-	sets.midcast.finale = {range="Ney"}
-	sets.midcast.mambo = {range="Vihuela"}
-	sets.midcast.virelai = {range="Cyt. Anglica +1"}
-	sets.midcast.hymnus = {range="Angel Lyre"}
-	sets.midcast.threnody = {range="Sorrowful Harp"}
-	sets.midcast.lullaby = {range="Nursemaid's Harp"}
-	sets.midcast.march = {range="Iron Ram Horn",hands="Fili Manchettes"}
-	sets.midcast.requiem = {range="Hamelin Flute"}
-	sets.midcast.carol = {range="Crumhorn +1"}
-	sets.midcast.prelude = {range="Angel's Flute +1"}
-	sets.midcast.etude = {range="Rose Harp +1"}
-	sets.midcast.madrigal = {range="Traversiere+1"}
-	sets.midcast.minuet = {range="Cornette +2",body="Fili Hongreline"}
-	sets.midcast.scherzo = {feet="Fili Cothurnes"}
+	sets.midcast.ballad = {legs = "Fili Rhingrave"}
+	sets.midcast.march = {hands = "Fili Manchettes"}
+	sets.midcast.minuet = {body = "Fili Hongreline"}
+	sets.midcast.scherzo = {feet = "Fili Cothurnes"}
 	
 	--Aftercast sets
 	sets.aftercast = {}
 	
 	sets.aftercast.idle = {
-		range="Oneiros Harp",
-		head="Aoidos' Calot +1",
-		body="Fili Hongreline",
-		hands="Fili Manchettes",
-		legs="Fili Rhingrave",
-		feet="Fili Cothurnes"}
+		-- head = "Aoidos' Calot +1",
+		neck = "Twilight Torque",
+		-- ear1 = "",
+		-- ear2 = "",
+		-- body = "Fili Hongreline",
+		-- hands = "Fili Manchettes",
+		ring1 = "Defending Ring",
+		ring2 = "Shadow Ring",
+		back = "Shadow Mantle",
+		-- legs = "Fili Rhingrave",
+		feet = "Fili Cothurnes"
+	}
 	
 	sets.aftercast.engaged = {
-		range="Angel Lyre",
-		head="Aetosaur Helm",
-		neck="Agasaya's Collar",
-		ear2="Brutal Earring",
-		body="Aetosaur Jerkin",
-		hands="Aetosaur Gloves",
-		ring1="Prolix Ring",
-		ring2="Rajas Ring",
-		back="Atheling Mantle",
-		waist="Windbuffet Belt",
-		legs="Aeto. Trousers",
-		feet="Aeto. Ledelsens"}	
+		range = "Gjallarhorn",
+		head = "Aya. Zucchetto +2",
+		neck = "Asperity Necklace",
+		ear1 = "Bladeborn Earring",
+		ear2 = "Steelflash Earring",
+		body = "Ayanmo Corazza +2",
+		hands = "Aya. Manopolas +2",
+		ring1 = "Defending Ring",
+		ring2 = "Rajas Ring",
+		back = "Atheling Mantle",
+		waist = "Windbuffet Belt +1",
+		legs = "Aya. Cosciales +2",
+		feet = "Aya. Gambieras +2"
+	}	
 		
 	--Weapon Skill sets
 	sets.ws = {}
 	
-	sets.ws['Evisceration'] = {
-		range="Angel Lyre",
-		head="Aetosaur Helm",
-		neck="Rancor Collar",
-		ear2="Brutal Earring",
-		body="Aetosaur Jerkin",
-		hands="Aetosaur Gloves",
-		ring1="Ramuh Ring",
-		ring2="Ramuh Ring",
-		back="Atheling Mantle",
-		waist="Cuchulain's Belt",
-		legs="Byakko's Haidate",
-		feet="Aeto. Ledelsens"}
+	sets.ws["Evisceration"] = {
+		head = "Aya. Zucchetto +2",
+		neck = "Rancor Collar",
+		ear1 = "Moonshade Earring",
+		ear2 = "Brutal Earring",
+		body = "Ayanmo Corazza +2",
+		hands = "Aya. Manopolas +2",
+		ring1 = "Ramuh Ring",
+		ring2 = "Ramuh Ring",
+		back = "Atheling Mantle",
+		waist = "Cuchulain's Belt",
+		legs = "Aya. Cosciales +2",
+		feet = "Aya. Gambieras  +2"
+	}
+
+	sets.ws["Rudra's Storm"] = {
+		head = "Aya. Zucchetto +2",
+		neck = "Rancor Collar",
+		ear1 = "Moonshade Earring",
+		ear2 = "Brutal Earring",
+		body = "Ayanmo Corazza +2",
+		hands = "Aya. Manopolas +2",
+		ring1 = "Ramuh Ring",
+		ring2 = "Ramuh Ring",
+		back = "Atheling Mantle",
+		waist = "Cuchulain's Belt",
+		legs = "Aya. Cosciales +2",
+		feet = "Aya. Gambieras  +2"
+	}
 		
-	sets.ws['Mordant Rime'] = {
-		range="Iron Ram Horn",
-		head="Wayfarer Circlet",
-		neck="Piper's Torque",
-		ear2="Brutal Earring",
-		body="Wayfarer Robe",
-		hands="Wayfarer Cuffs",
-		ring1="Carb. Ring",
-		ring2="Ramuh Ring",
-		back="Mesmeric Cape",
-		waist="Gleeman's Belt",
-		legs="Wayfarer Slops",
-		feet="Wayfarer Clogs "}
+	sets.ws["Mordant Rime"] = {
+		range = "Iron Ram Horn",
+		head = "Wayfarer Circlet",
+		neck = "Piper's Torque",
+		ear1 = "Aoidos' Earring",
+		ear2 = "Moonshade Earring",
+		body = "Wayfarer Robe",
+		hands = "Fili Manchettes",
+		ring1 = "Carb. Ring",
+		ring2 = "Carb. Ring",
+		back = "Mesmeric Cape",
+		waist = "Gleeman's Belt",
+		legs = "Fili Rhingrave",
+		feet = "Inyanga Crackows"
+	}
  end
 function precast(spell)
 	if spell.type == 'BardSong' then
