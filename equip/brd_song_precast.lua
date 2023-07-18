@@ -1,18 +1,13 @@
 sets.song_precast = {
-	main = "",
-	sub = "",
-	range = "",
-	-- ammo = "",
+	range = "Angel Lyre+1",
 	head = "Aoidos' Calot +1",
+	neck = "Aoidos' Matiniee",
+	ear2 = "Loquac. Earring",
 	body = "Sha'ir Manteel",
-	back = "",
-	neck = "",
-	hands = "",
-	waist = "",
-	ear1 = "",
-	ring1 = "",
-	legs = "",
-	ear2 = "",
-	ring2 = "",
-	feet = ""
+	hands = "Wayfarer Cuffs",
+	ring2 = "Prolix Ring",
+	back = "Twilight Cape",
+	waist = "Embla Sash",
+	legs = "Aeto. Trousers",
+	feet = "Bihu Slippers +1"
 }
