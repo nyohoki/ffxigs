@@ -1,4 +1,4 @@
-sets.song-precast = {
+sets.brd-precast-song = {
 	range = "Angel Lyre+1",
 	head = "Aoidos' Calot +1",
 	neck = "Aoidos' Matiniee",
