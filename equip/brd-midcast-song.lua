@@ -1,4 +1,4 @@
-sets.song-midcast = {
+sets.brd-midcast-song = {
 	head = "Aoidos' Calot +1",
 	neck = "Aoidos' Matiniee",		
 	ear1 = "Loquac. Earring",
