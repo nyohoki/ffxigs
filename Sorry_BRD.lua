@@ -1,3 +1,9 @@
+--[[function sub_job_change(new, old)
+	send_command("wait 2; input /lockstyleset 1")
+end
+send_command("wait 2; input /lockstyleset 1")
+--]]
+include("common/lockstyle.lua")
 function get_sets()
 
 	--Preccast sets
@@ -5,14 +11,15 @@ function get_sets()
 	
 	sets.precast.song = {
 		range = "Angel Lyre+1",
-		head = "Aoidos' Caolt +1",
+		head = "Aoidos' Calot +1",
 		neck = "Aoidos' Matiniee",
 		ear1 = "Loquac. Earring",
 		body = "Sha'ir Manteel",
 		hands = "Wayfarer Cuffs",
 		ring2 = "Prolix Ring",
 		back = "Twilight Cape",
-		waist = "Aoidos' Belt",
+		-- waist = "Aoidos' Belt",
+		waist = "Embla Sash",
 		legs = "Aeto. Trousers",
 		feet = "Bihu Slippers +1"}
 
@@ -26,11 +33,13 @@ function get_sets()
 		body = "Fili Hongreline",
 		hands = "Fili Manchettes",
 		ring1 = "Prolix Ring",
-		ring2 = "Carb. Ring",
 		back = "Twilight Cape",
-		waist = "Gleeman's Belt",
+		-- waist = "Gleeman's Belt",
+		waist = "Embla Sash",
 		legs = "Fili Rhingrave",
-		feet = "Bihu Slippers +1"}
+		feet = "Bihu Slippers +1",
+		ring2 = "Carb. Ring"
+	}
 		
 	-- Midcast Songs
 	sets.midcast.ballad = {legs = "Fili Rhingrave"}
@@ -54,20 +63,50 @@ function get_sets()
 		-- legs = "Fili Rhingrave",
 		feet = "Fili Cothurnes"
 	}
-	
-	sets.aftercast.engaged = {
+	tp_sets = {}
+	tp_sets["whm"] = {
+		range = "Gjallarhorn",
+		head = "Aya. Zucchetto +2",
+		body = "Ayanmo Corazza +2",
+		back = "Atheling Mantle",
+		neck = "Asperity Necklace",
+		hands = "Aya. Manopolas +2",
+		waist = "Windbuffet Belt +1",
+		ear1 = "Bladeborn Earring",
+		ring1 = "Defending Ring",
+		legs = "Aya. Cosciales +2",
+		ear2 = "Steelflash Earring",
+		ring2 = "Rajas Ring",
+		feet = "Aya. Gambieras +2"
+	}
+	sets.engaged_whm = {
 		range = "Gjallarhorn",
 		head = "Aya. Zucchetto +2",
 		neck = "Asperity Necklace",
 		ear1 = "Bladeborn Earring",
-		ear2 = "Steelflash Earring",
 		body = "Ayanmo Corazza +2",
 		hands = "Aya. Manopolas +2",
 		ring1 = "Defending Ring",
-		ring2 = "Rajas Ring",
 		back = "Atheling Mantle",
 		waist = "Windbuffet Belt +1",
 		legs = "Aya. Cosciales +2",
+		ear2 = "Steelflash Earring",
+		ring2 = "Rajas Ring",
+		feet = "Aya. Gambieras +2"
+	}
+	sets.engaged_dnc = {
+		range = "Gjallarhorn",
+		head = "Aya. Zucchetto +2",
+		neck = "Asperity Necklace",
+		ear1 = "Dudgeon Earring",
+		body = "Ayanmo Corazza +2",
+		hands = "Aya. Manopolas +2",
+		ring1 = "Defending Ring",
+		back = "Atheling Mantle",
+		waist = "Windbuffet Belt +1",
+		legs = "Aya. Cosciales +2",
+		ear2 = "Heartseeker Earring",
+		ring2 = "Rajas Ring",
 		feet = "Aya. Gambieras +2"
 	}	
 		
@@ -150,16 +189,25 @@ function midcast(spell)
 	
 end
 function aftercast(spell)
-	if player.status == 'Engaged' then
-		equip(sets.aftercast.engaged)
-	else equip(sets.aftercast.idle)
+	if player.status == "Engaged" 
+		and player.sub_job == "WHM"
+			then equip(sets.engaged_whm)
+		elseif player.sub_job == "DNC"
+			then equip(sets.engaged_dnc)
+		end
+	end
+	if player.status == "Idle" 
+		then equip(sets.aftercast.idle)
 	end
 end	
 function status_change(new,old)
-	if new == 'Engaged' then
-		equip(sets.aftercast.engaged)
+	--[[if new == "Engaged" and player.sub_job == "WHM"
+		then equip(sets.engaged_whm)
 		disable('main','sub','ammo')
-	elseif new == 'Idle' then
-		equip(sets.aftercast.idle)
+	elseif new == "Engaged" and player.sub_job == "DNC"
+		then equip(sets.engaged_dnc)
+		disable('main','sub','ammo')]]
+	if new == "Idle"
+	then equip(sets.aftercast.idle)
 	end
 end
