@@ -1,3 +1,6 @@
+include("common/lockstyle.lua")
+
+
 function get_sets()
 	
 	--Job Ability Sets

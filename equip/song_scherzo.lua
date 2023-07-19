@@ -1,3 +1,3 @@
-sets.song-scherzo = {
+sets.song_scherzo = {
 	feet = "Fili Cothurnes"
 }

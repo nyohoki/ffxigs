@@ -1,3 +1,5 @@
+include("common/lockstyle.lua")
+
 function get_sets()
 
 	--JA sets

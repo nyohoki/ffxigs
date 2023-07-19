@@ -1,4 +1,4 @@
-sets.brd-mordant_rime = {
+sets.brd_mordant_rime = {
 	range = "Iron Ram Horn",
 	head = "Wayfarer Circlet",
 	neck = "Piper's Torque",

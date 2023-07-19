@@ -1,4 +1,4 @@
-sets.aftercast.idle = {
+sets.brd_idle = {
 	-- head = "Aoidos' Calot +1",
 	neck = "Twilight Torque",
 	-- ear1 = "",

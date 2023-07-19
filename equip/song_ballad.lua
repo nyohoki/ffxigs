@@ -1,3 +1,3 @@
-sets.song-ballad = {
+sets.song_ballad = {
 	legs = "Fili Rhingrave"
 }

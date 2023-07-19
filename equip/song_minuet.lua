@@ -1,3 +1,3 @@
-sets.song-minuet = {
+sets.song_minuet = {
 	body = "Fili Hongreline"
 }

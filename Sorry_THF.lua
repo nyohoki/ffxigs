@@ -1,3 +1,6 @@
+include("common/lockstyle.lua")
+
+
 function get_sets()
 	tp_index = 1
 	idle_index = 1

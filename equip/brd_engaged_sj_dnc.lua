@@ -1,9 +1,9 @@
-sets.brd-engaged-sj-whm = {
+sets.brd_engaged_sj_dnc = {
 	range = "Gjallarhorn",
 	head = "Aya. Zucchetto +2",
 	neck = "Asperity Necklace",
-	ear1 = "Bladeborn Earring",
-	ear2 = "Steelflash Earring",
+	ear1 = "Dudgeon Earring",
+	ear2 = "Heartseeker Earring",
 	body = "Ayanmo Corazza +2",
 	hands = "Aya. Manopolas +2",
 	ring1 = "Defending Ring",
