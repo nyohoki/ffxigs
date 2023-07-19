@@ -33,10 +33,11 @@ function precast(spell)
 	if player.status == "Engaged"
 		then equip({range=nil})
 	end
-	if spell.name == "Sneak"
+	include("common/precast_sneak")
+	--[[if spell.name == "Sneak"
 		and buffactive.sneak
 		then windower.ffxi.cancel_buff(71)
-	end
+	end]]
 end
 
 function midcast(spell)
