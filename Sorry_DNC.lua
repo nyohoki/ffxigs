@@ -23,7 +23,7 @@ function get_sets()
 		sets.ja['Quickstep'] = (sets.ja.step)
 		sets.ja['Feather Step'] = set_combine(sets.ja.step,{feet="Charis Shoes +2"})
 	
-	sets.ja.waltz = {head="Etoile Tiara",body="Maxixi Casaque",back="Toetapper Mantle",feet="Maxixi Shoes"}
+	include("dnc/waltz.lua")
 		sets.ja['Curing Waltz'] = (sets.ja.waltz)
 		sets.ja['Curing Waltz II'] = (sets.ja.waltz)
 		sets.ja['Curing Waltz III'] = (sets.ja.waltz)
@@ -32,7 +32,7 @@ function get_sets()
 		sets.ja['Healing Waltz'] = (sets.ja.waltz)
 		sets.ja['Divine Waltz'] = (sets.ja.waltz)
 		sets.ja['Divine Waltz II'] = (sets.ja.waltz)
-		
+	
 	sets.ja.saber = {legs="Horos Tights"}
 		sets.ja['Saber Dance'] = (sets.ja.saber)
 		
@@ -46,27 +46,20 @@ function get_sets()
 	--Aftercast sets
 	sets.aftercast = {}
 	
-	sets.aftercast.idle = {
-		feet="Tandava Crackows"}
+	include("dnc/idle.lua")
 	
-	sets.aftercast.engaged = {ammo="Charis Feather",head="Meghanada Visor",neck="Asperity Necklace",ear1="Suppanomimi",ear2="Digni. Earring",body="Meghanada Cuirie",hands="Meghanada Gloves",ring1="Epona's Ring",ring2="Rajas Ring",back="Toetapper Mantle",waist="Windbuffet Belt",legs="Meg. Chausses",feet="Meg. Jambeaux"}	
+	include("dnc/engaged.lua")	
 		
 	--Weapon Skill sets
-	sets.ws = {}
-	
-	sets.ws.rudra = {ammo="Charis Feather",head="Meghanada Visor",neck="Shadow Gorget",ear2="Brutal Earring",body="Maghanada Cuirie",hands="Meghanada Gloves",ring1="Ramuh Ring",ring2="Ramuh Ring",back="Senuna's Mantle",waist="Cuchulain's Belt",legs="Meg. Chausses",feet="Meg. Jambeaux"}
-	
-	sets.ws.evis = {ammo="Charis Feather",head="Meghanada Visor",neck="Shadow Gorget",ear2="Brutal Earring",body="Maghanada Cuirie",hands="Meghanada Gloves",ring1="Ramuh Ring",ring2="Ramuh Ring",back="Senuna's Mantle",waist="Cuchulain's Belt",legs="Meg. Chausses",feet="Meg. Jambeaux"}
-	
-	sets.ws.pyrrhic = {ammo="Charis Feather",head="Meghanada Visor",neck="Rancor Collar",ear2="Brutal Earring",body="Maghanada Cuirie",hands="Meghanada Gloves",ring1="Ramuh Ring",ring2="Ramuh Ring",back="Senuna's Mantle",waist="Cuchulain's Belt",legs="Meg. Chausses",feet="Meg. Jambeaux"}
-		
-	sets.ws.sharky = {ammo="Charis Feather",head="Meghanada Visor",neck="Rancor Collar",ear2="Brutal Earring",body="Maghanada Cuirie",hands="Meghanada Gloves",ring1="Ramuh Ring",ring2="Ramuh Ring",back="Senuna's Mantle",waist="Cuchulain's Belt",legs="Meg. Chausses",et="Meg. Jambeaux"}
-	
+	include("dnc/rudras_storm.lua")
+	include("dnc/evisceration.lua")
+	include("dnc/pyrrhic_kleos.lua")
+	include("dnc/shark_bite.lua")	
  end
 function precast(spell)
 	if spell.type == 'Waltz' and buffactive['saber dance'] then windower.ffxi.cancel_buff(410)
-	elseif spell.type == 'Samba' and buffactive['fan dance'] then windower.ffxi.cancel_buff(411)
-	elseif spell.name == 'Spectral Jig' and buffactive.sneak then windower.ffxi.cancel_buff(71) end
+	elseif spell.type == 'Samba' and buffactive['fan dance'] then windower.ffxi.cancel_buff(411) end
+	include("common/precast_spectral_jig.lua")
 	if spell.type == 'Jig' then equip(sets.ja.jig) end
 	if player.status == 'Engaged' then equip({range=nil}) end
 	if spell.type == 'Jig' then equip(sets.ja.jig) end
@@ -84,26 +77,16 @@ function midcast(spell)
 end 
 function aftercast(spell)
 	if player.status == 'Engaged' then
-		equip(sets.aftercast.engaged)
+		equip(sets.engaged)
 	else equip(sets.aftercast.idle)
 	end
 end	
 function status_change(new,old)
 	if new == 'Engaged' then
-		equip(sets.aftercast.engaged)
+		equip(sets.engaged)
 		disable('main','sub','ammo')
 	elseif new == 'Idle' then
 		equip(sets.aftercast.idle)
 	end	
 end
---function auto_presto(spell)
-	--if spell.type == "Step" then
-		--local allRecasts = windower.ffxi.get_ability_recast()
-		--local prestoCooldown = allRecasts[236]
-		--local under3FMs = not buffactive["Finishing Move 3"] and not buffactive["Finishing Move 4"] and not buffactive["Finishing Move 5"]
-		--if player.main_job_level >= 77 and prestoCooldown < 1 and underFMs then
-			--cast_delay(1.1)
-			--send_command('@input /ja "Presto" <me>')
-		--end
-	--end
---end
+include("equip/auto_presto.lua")
