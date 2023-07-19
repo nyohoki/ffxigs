@@ -127,11 +127,11 @@ function status_change(new,old)
 	if new == "Engaged"
 		and player.sub_job == "WHM"
 			then equip(sets.brd_engaged_sj_whm)
-		disable('main','sub','ammo')
+		disable("main", "sub", "ammo")
 	elseif new == "Engaged"
 		and player.sub_job == "DNC"
 			then equip(sets.brd_engaged_sj_dnc)
-		disable('main','sub','ammo')
+		disable("main", "sub", "ammo")
 	end
 	if new == "Idle" 
 		then equip(sets.brd_idle)
