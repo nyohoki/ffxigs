@@ -1,4 +1,4 @@
-sets.brd_rudras_storm = {
+sets.rudras_storm = {
 	head = "Aya. Zucchetto +2",
 	neck = "Rancor Collar",
 	ear1 = "Moonshade Earring",
