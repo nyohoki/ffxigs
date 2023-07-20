@@ -1,4 +1,4 @@
-sets.brd_idle = {
+sets.idle = {
 	-- head = "Aoidos' Calot +1",
 	neck = "Twilight Torque",
 	-- ear1 = "",
