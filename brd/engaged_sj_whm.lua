@@ -1,4 +1,4 @@
-sets.brd_engaged_sj_whm = {
+sets.engaged_sj_whm = {
 	range = "Gjallarhorn",
 	head = "Aya. Zucchetto +2",
 	neck = "Asperity Necklace",
