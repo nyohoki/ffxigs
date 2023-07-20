@@ -8,22 +8,22 @@ function get_sets()
 	-- Midcast sets
 	include("equip/brd_midcast_song.lua")
 
-	include("equip/song_ballad.lua")
-	include("equip/song_march.lua")
-	include("equip/song_minuet.lua")
-	include("equip/song_scherzo.lua")
+	include("brd/song_ballad.lua")
+	include("brd/song_march.lua")
+	include("brd/song_minuet.lua")
+	include("brd/song_scherzo.lua")
 
 	-- idle sets
-	include("equip/brd_idle")
+	include("brd/idle")
 
 	-- engaged sets
-	include("equip/brd_engaged_sj_whm.lua")
-	include("equip/brd_engaged_sj_dnc.lua")
+	include("brd/engaged_sj_whm.lua")
+	include("brd/engaged_sj_dnc.lua")
 
 	-- Weapon Skill sets
-	include("equip/brd_evisceration.lua")
-	include("equip/brd_rudras_storm.lua")
-	include("equip/brd_mordant_rime.lua")
+	include("brd/evisceration.lua")
+	include("brd/rudras_storm.lua")
+	include("brd/mordant_rime.lua")
 end
 
 function precast(spell)
@@ -46,7 +46,7 @@ end
 
 function midcast(spell)
 	if spell.type == "BardSong" 
-		then equip(sets.brd_midcast_song)
+		then equip(sets.midcast_song)
 	end
 	if string.find(spell.english,'Ballad')
 		then equip(sets.song_ballad)
@@ -107,38 +107,38 @@ function midcast(spell)
 	
 	-- weapon skills
 	if spell.name == "Evisceration"
-		then equip(sets.brd_evisceration)
+		then equip(sets.evisceration)
 	end
 	if spell.name == "Mordant Rime"
-		then equip(sets.brd_mordan_rime)
+		then equip(sets.mordan_rime)
 	end
 	if spell.name == "Rudra's Storm"
-		then equip(sets.brd_rudras_storm)
+		then equip(sets.rudras_storm)
 	end
 	
 end
 function aftercast(spell)
 	if player.status == "Engaged" 
 		and player.sub_job == "WHM"
-			then equip(sets.brd_engaged_sj_whm)
+			then equip(sets.engaged_sj_whm)
 		elseif player.sub_job == "DNC"
-			then equip(sets.brd_engaged_sj_dnc)
+			then equip(sets.engaged_sj_dnc)
 	end
 	if player.status == "Idle" 
-		then equip(sets.brd_idle)
+		then equip(sets.idle)
 	end
 end
 function status_change(new,old)
 	if new == "Engaged"
 		and player.sub_job == "WHM"
-			then equip(sets.brd_engaged_sj_whm)
+			then equip(sets.engaged_sj_whm)
 		disable("main", "sub", "ammo")
 	elseif new == "Engaged"
 		and player.sub_job == "DNC"
-			then equip(sets.brd_engaged_sj_dnc)
+			then equip(sets.engaged_sj_dnc)
 		disable("main", "sub", "ammo")
 	end
 	if new == "Idle" 
-		then equip(sets.brd_idle)
+		then equip(sets.idle)
 	end
 end
