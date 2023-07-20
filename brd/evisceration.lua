@@ -1,4 +1,4 @@
-sets.brd_evisceration = {
+sets.evisceration = {
 	head = "Aya. Zucchetto +2",
 	neck = "Rancor Collar",
 	ear1 = "Moonshade Earring",
