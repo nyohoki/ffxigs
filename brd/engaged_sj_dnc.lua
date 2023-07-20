@@ -1,4 +1,4 @@
-sets.brd_engaged_sj_dnc = {
+sets.engaged_sj_dnc = {
 	range = "Gjallarhorn",
 	head = "Aya. Zucchetto +2",
 	neck = "Asperity Necklace",
