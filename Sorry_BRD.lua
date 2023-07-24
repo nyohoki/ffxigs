@@ -110,7 +110,7 @@ function midcast(spell)
 		then equip(sets.evisceration)
 	end
 	if spell.name == "Mordant Rime"
-		then equip(sets.mordan_rime)
+		then equip(sets.mordant_rime)
 	end
 	if spell.name == "Rudra's Storm"
 		then equip(sets.rudras_storm)
