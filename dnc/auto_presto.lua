@@ -6,7 +6,7 @@ function auto_presto(spell)
 			and not buffactive["Finishing Move 4"]
 			and not buffactive["Finishing Move 5"]
 				then cast_delay(1.1)
-				send_command("@input /ja "Presto" <me>")
+				send_command('@input /ja "Presto" <me>')
 		end
 	end
 end

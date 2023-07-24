@@ -1,28 +1,20 @@
 include("common/lockstyle.lua")
-
+include("common/nighttime.lua")
 
 function status_change(new,old)
+	if nighttime()
+		then equip(sets.nighttime)
+	end
 	if new == "Dead" 
-	then equip(sets.dead)
+		then equip(sets.dead)
 	end
-	if windy() then
-		equip(sets.windy)
-	end
-	
 end
 
 function get_sets()
 	sets.dead = {
 		body = "Federation Aketon"
 	}
-	sets.windy = {
-		body = "Federation Aketon"
+	sets.nightboots = {
+		feet = "Ninja Kyahan"
 	}
-end
-
-function windy()
-	if world.zone_id == 240 then
-	return true
-else
-	false
 end

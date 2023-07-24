@@ -1,14 +1,15 @@
-sets.dnc_pyrrhic_kleos = {
+sets.pyrrhic_kleos = {
 	ammo = "Charis Feather",
-	head = "Meghanada Visor",
-	neck = "Rancor Collar",
+	head = "Meghanada Visor +2",
+	neck = "Asperity Necklace",
+	ear1 = "Moonshade Earring",
 	ear2 = "Brutal Earring",
-	body = "Meghanada Cuirie",
-	hands = "Meghanada Gloves",
+	body = "Meg. Cuirie +2",
+	hands = "Meg. Gloves +2",
 	ring1 = "Ramuh Ring",
-	ring2 = "Ramuh Ring",
-	back = "Senuna's Mantle",
+	ring2 = "Karieyh Ring",
+	back = "Toetapper Mantle",
 	waist = "Cuchulain's Belt",
-	legs = "Meg. Chausses",
-	feet = "Meg. Jambeaux"
+	legs = "Meg. Chausses +2",
+	feet = "Meg. Jam. +2"
 }

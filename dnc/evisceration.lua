@@ -1,14 +1,15 @@
-sets.dnc_evisceration = {
+sets.evisceraton = {
 	ammo = "Charis Feather",
-	head = "Meghanada Visor",
+	head = "Mummu Bonnet +2",
 	neck = "Shadow Gorget",
+	ear1 = "Moonshade Earring",
 	ear2 = "Brutal Earring",
-	body = "Meghanada Cuirie",
-	hands = "Meghanada Gloves",
+	body = "Meg. Cuirie +2",
+	hands = "Meg. Gloves +2",
 	ring1 = "Ramuh Ring",
-	ring2 = "Ramuh Ring",
-	back = "Senuna's Mantle",
+	ring2 = "Karieyh Ring",
+	back = "Toetapper Mantle",
 	waist = "Cuchulain's Belt",
-	legs = "Meg. Chausses",
-	feet = "Meg. Jambeaux"
+	legs = "Mummu Kecks +2",
+	feet = "Mummu Gamash. +2"
 }
