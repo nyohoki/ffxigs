@@ -1,29 +1,154 @@
-include("common/lockstyle.lua")
+function sub_job_change(new, old)
+    send_command(
+		"wait 10; \
+		input /lockstyleset 1"
+	)
+end
 
+send_command(
+	"wait 2; \
+	input /lockstyleset 1"
+)
 function get_sets()
 
 	--Preccast sets
-	include("equip/brd_precast_song.lua")
+	sets.precast_song = {
+		range = "Angel Lyre+1",
+		head = "Aoidos' Calot +1",
+		neck = "Aoidos' Matiniee",
+		ear1 = "Loquac. Earring",
+		-- ear2 = "",
+		body = "Sha'ir Manteel",
+		hands = "Wayfarer Cuffs",
+		ring1 = "Prolix Ring",
+		ring2 = "Carb. Ring",
+		back = "Twilight Cape",
+		waist = "Embla Sash",
+		legs = "Aeto. Trousers",
+		feet = "Bihu Slippers +1"
+	}
 
 	-- Midcast sets
-	include("equip/brd_midcast_song.lua")
+	sets.midcast_song = {
+		head = "Aoidos' Calot +1",
+		neck = "Aoidos' Matiniee",		
+		ear1 = "Loquac. Earring",
+		-- ear2 = "",
+		body = "Fili Hongreline",
+		hands = "Fili Manchettes",
+		ring1 = "Prolix Ring",
+		ring2 = "Carb. Ring",
+		back = "Twilight Cape",
+		waist = "Embla Sash",
+		legs = "Fili Rhingrave",
+		feet = "Bihu Slippers +1"
+	}
 
-	include("brd/song_ballad.lua")
-	include("brd/song_march.lua")
-	include("brd/song_minuet.lua")
-	include("brd/song_scherzo.lua")
+	sets.song_ballad = {
+		legs = "Fili Rhingrave"
+	}
+	sets.song_march = {
+		hands = "Fili Manchettes"
+	}
+	sets.song_minuet = {
+		body = "Fili Hongreline"
+	}
+	sets.song_scherzo = {
+		feet = "Fili Cothurnes"
+	}
 
 	-- idle sets
-	include("brd/idle")
+	sets.idle = {
+		-- head = "Aoidos' Calot +1",
+		neck = "Twilight Torque",
+		-- ear1 = "",
+		-- ear2 = "",
+		-- body = "Fili Hongreline",
+		-- hands = "Fili Manchettes",
+		ring1 = "Defending Ring",
+		ring2 = "Shadow Ring",
+		back = "Shadow Mantle",
+		-- waist = "",
+		-- legs = "Fili Rhingrave",
+		feet = "Fili Cothurnes"
+	}
 
 	-- engaged sets
-	include("brd/engaged_sj_whm.lua")
-	include("brd/engaged_sj_dnc.lua")
+	sets.engaged_sj_whm = {
+		range = "Gjallarhorn",
+		head = "Aya. Zucchetto +2",
+		neck = "Asperity Necklace",
+		ear1 = "Bladeborn Earring",
+		ear2 = "Steelflash Earring",
+		body = "Ayanmo Corazza +2",
+		hands = "Aya. Manopolas +2",
+		ring1 = "Defending Ring",
+		ring2 = "Rajas Ring",
+		back = "Atheling Mantle",
+		waist = "Windbuffet Belt +1",
+		legs = "Aya. Cosciales +2",
+		feet = "Aya. Gambieras +2"
+	}
+	sets.engaged_sj_dnc = {
+		range = "Gjallarhorn",
+		head = "Aya. Zucchetto +2",
+		neck = "Asperity Necklace",
+		ear1 = "Dudgeon Earring",
+		ear2 = "Heartseeker Earring",
+		body = "Ayanmo Corazza +2",
+		hands = "Aya. Manopolas +2",
+		ring1 = "Defending Ring",
+		ring2 = "Rajas Ring",
+		back = "Atheling Mantle",
+		waist = "Windbuffet Belt +1",
+		legs = "Aya. Cosciales +2",
+		feet = "Aya. Gambieras +2"
+	}
 
 	-- Weapon Skill sets
-	include("brd/evisceration.lua")
-	include("brd/rudras_storm.lua")
-	include("brd/mordant_rime.lua")
+	sets.evisceration = {
+		head = "Aya. Zucchetto +2",
+		neck = "Rancor Collar",
+		ear1 = "Moonshade Earring",
+		ear2 = "Brutal Earring",
+		body = "Ayanmo Corazza +2",
+		hands = "Aya. Manopolas +2",
+		ring1 = "Ramuh Ring",
+		ring2 = "Ramuh Ring",
+		back = "Atheling Mantle",
+		waist = "Cuchulain's Belt",
+		legs = "Aya. Cosciales +2",
+		feet = "Aya. Gambieras  +2"
+	}
+	sets.rudras_storm = {
+		head = "Aya. Zucchetto +2",
+		neck = "Rancor Collar",
+		ear1 = "Moonshade Earring",
+		ear2 = "Brutal Earring",
+		body = "Ayanmo Corazza +2",
+		hands = "Aya. Manopolas +2",
+		ring1 = "Ramuh Ring",
+		ring2 = "Ramuh Ring",
+		back = "Atheling Mantle",
+		waist = "Cuchulain's Belt",
+		legs = "Aya. Cosciales +2",
+		feet = "Aya. Gambieras  +2"
+	}
+	sets.mordant_rime = {
+		range = "Iron Ram Horn",
+		head = "Wayfarer Circlet",
+		neck = "Piper's Torque",
+		ear1 = "Aoidos' Earring",
+		ear2 = "Moonshade Earring",
+		body = "Wayfarer Robe",
+		hands = "Fili Manchettes",
+		ring1 = "Carb. Ring",
+		ring2 = "Carb. Ring",
+		back = "Mesmeric Cape",
+		waist = "Gleeman's Belt",
+		legs = "Fili Rhingrave",
+		feet = "Inyanga Crackows"
+	}
 end
 
 function precast(spell)
