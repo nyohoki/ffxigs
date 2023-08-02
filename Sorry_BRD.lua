@@ -1,14 +1,18 @@
+send_command(
+	"wait 10; \
+	input /lockstyleset 1"
+)
+send_command(
+	"wait 1; \
+	input /macro book 2; \
+	input /echo macro book 2"
+)
 function sub_job_change(new, old)
     send_command(
 		"wait 10; \
 		input /lockstyleset 1"
 	)
 end
-
-send_command(
-	"wait 2; \
-	input /lockstyleset 1"
-)
 function get_sets()
 
 	--Preccast sets
@@ -161,6 +165,10 @@ function precast(spell)
 	if spell.name == "Sneak"
 	and buffactive.sneak
 	then windower.ffxi.cancel_buff(71)
+	end
+	if spell.name == "Spectral Jig"
+		and buffactive.sneak
+		then windower.ffxi.cancel_buff(71)
 	end
 	-- include("common/precast_sneak")
 	--[[if spell.name == "Sneak"

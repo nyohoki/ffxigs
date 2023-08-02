@@ -1,6 +1,18 @@
-include("common/lockstyle.lua")
-
-
+send_command(
+	"wait 10; \
+	input /lockstyleset 1"
+)
+send_command(
+	"wait 1; \
+	input /macro book 3 \
+	input /echo macro book 3"
+)
+function sub_job_change(new, old)
+    send_command(
+		"wait 10; \
+		input /lockstyleset 1"
+	)
+end
 function get_sets()
 	tp_index = 1
 	idle_index = 1
@@ -81,7 +93,7 @@ function get_sets()
 		body = "Mummu Jacket +2",
 		hands = "Meg. Gloves +2",
 		ring1 = "Ramuh Ring",
-		ring2 = "Karieyh Ring"
+		ring2 = "Karieyh Ring",
 		back = "Atheling Mantle",
 		waist = "Cuchulain's Belt",
 		legs = "Mummu Kecks +2",
@@ -111,7 +123,7 @@ function get_sets()
 		body = "Mummu Jacket +2",
 		hands = "Meg. Gloves +2",
 		ring1 = "Ramuh Ring",
-		ring2 = "Karieyh Ring"
+		ring2 = "Karieyh Ring",
 		back = "Atheling Mantle",
 		waist = "Cuchulain's Belt",
 		legs = "Mummu Kecks +2",

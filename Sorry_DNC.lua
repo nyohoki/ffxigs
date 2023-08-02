@@ -1,18 +1,59 @@
 send_command(
-	"wait 2; \
+	"wait 10; \
 	input /lockstyleset 1"
+)
+send_command(
+	"wait 1; \
+	input /macro book 1; \
+	input /echo macro book 1"
 )
 function sub_job_change(new, old)
     send_command(
 		"wait 10; \
 		input /lockstyleset 1"
 	)
+
 end
 
 function get_sets()
-	
+	sets.idle = {
+		head = "Mummu Bonnet +2",
+		neck = "Twilight Torque",
+		-- ear1 = "",
+		-- ear2 = "",
+		body = "Mummu Jacket +2",
+		hands = "Mummu Wrists +2",
+		ring1 = "Defending Ring",
+		ring2 = "Karieyh Ring",
+		-- back = "",
+		-- waist = "",
+		legs = "Mummu Kecks +2",
+		feet = "Tandava Crackows"
+	}
+	sets.engaged = {
+		ammo = "Charis Feather",
+		head = "Mummu Bonnet +2",
+		neck = "Asperity Necklace",
+		ear1 = "Dudgeon Earring",
+		ear2 = "Heartseeker Earring",
+		body = "Mummu Jacket +2",
+		hands = "Mummu Wrists +2",
+		ring1 = "Epona's Ring",
+		ring2 = "Mummu Ring",
+		back = "Toetapper Mantle",
+		waist = "Windbuffet Belt +1",
+		legs = "Meg. Chausses +2",
+		feet = "Mummu Gamash. +2"
+	}
 
 	--JA sets
+	sets.samba_active = {
+		head = "Maculele Tiara",
+		--body = "",
+		hands = "Maculele Bangles",
+		--legs = "",
+		--feet = ""
+	}
 	sets.jig = {
 		legs = "Horos Tights",
 		feet = "Maxixi Shoes"
@@ -57,35 +98,7 @@ function get_sets()
 	}
 
 	--Aftercast sets
-	sets.idle = {
-		head = "Mummu Bonnet +2",
-		neck = "Twilight Torque",
-		-- ear1 = "",
-		-- ear2 = "",
-		body = "Mummu Jacket +2",
-		hands = "Mummu Wrists +2",
-		ring1 = "Defending Ring",
-		ring2 = "Karieyh Ring",
-		-- back = "",
-		-- waist = "",
-		legs = "Mummu Kecks +2",
-		feet = "Tandava Crackows"
-	}
-	sets.engaged = {
-		ammo = "Charis Feather",
-		head = "Mummu Bonnet +2",
-		neck = "Asperity Necklace",
-		ear1 = "Dudgeon Earring",
-		ear2 = "Heartseeker Earring",
-		body = "Mummu Jacket +2",
-		hands = "Mummu Wrists +2",
-		ring1 = "Epona's Ring",
-		ring2 = "Mummu Ring",
-		back = "Toetapper Mantle",
-		waist = "Windbuffet Belt +1",
-		legs = "Meg. Chausses +2",
-		feet = "Mummu Gamash. +2"
-	}
+	
 		
 	--Weapon Skill sets
 	sets.evisceration = {
