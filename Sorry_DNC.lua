@@ -14,8 +14,10 @@ function sub_job_change(new, old)
 	)
 
 end
-
 function get_sets()
+	sets.movin = {
+		feet = "Tandava Crackows"
+	}
 	sets.idle = {
 		head = "Mummu Bonnet +2",
 		neck = "Twilight Torque",
@@ -275,6 +277,7 @@ function aftercast(spell)
 		then equip(sets.engaged)
 	else equip(sets.idle)
 	end
+	if moving == true then equip(sets.movin) end
 end	
 
 function status_change(new,old)
@@ -283,4 +286,5 @@ function status_change(new,old)
 	elseif new == "Idle"
 		then equip(sets.idle)
 	end
+	if moving == true then equip(sets.movin) end
 end
