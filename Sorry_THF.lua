@@ -4,7 +4,7 @@ send_command(
 )
 send_command(
 	"wait 1; \
-	input /macro book 3 \
+	input /macro book 3; \
 	input /echo macro book 3"
 )
 function sub_job_change(new, old)
