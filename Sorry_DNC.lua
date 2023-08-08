@@ -36,8 +36,10 @@ function get_sets()
 		ammo = "Charis Feather",
 		head = "Mummu Bonnet +2",
 		neck = "Asperity Necklace",
-		ear1 = "Dudgeon Earring",
-		ear2 = "Heartseeker Earring",
+		ear1 = "Suppanomimi",
+		ear2 = "Digni. Earring",
+		-- ear1 = "Dudgeon Earring",
+		-- ear2 = "Heartseeker Earring",
 		body = "Mummu Jacket +2",
 		hands = "Mummu Wrists +2",
 		ring1 = "Epona's Ring",
@@ -100,15 +102,19 @@ function get_sets()
 	}
 
 	--Aftercast sets
-	
+	-- ?sets
+	sets.tp_boost = {
+		ear1 = "Moonshade Earring"
+	}
 		
 	--Weapon Skill sets
 	sets.evisceration = {
 		ammo = "Charis Feather",
 		head = "Mummu Bonnet +2",
 		neck = "Shadow Gorget",
-		ear1 = "Moonshade Earring",
-		ear2 = "Brutal Earring",
+		-- ear1 = "Moonshade Earring",
+		ear1 = "Brutal Earring",
+		ear2 = "Digni. Earring",
 		body = "Meg. Cuirie +2",
 		hands = "Meg. Gloves +2",
 		ring1 = "Ramuh Ring",
@@ -122,8 +128,9 @@ function get_sets()
 		ammo = "Charis Feather",
 		head = "Mummu Bonnet +2",
 		neck = "Shadow Gorget",
-		ear1 = "Moonshade Earring",
-		ear2 = "Brutal Earring",
+		-- ear1 = "Moonshade Earring",
+		ear1 = "Brutal Earring",
+		ear2 = "Digni. Earring",
 		body = "Mummu Jacket +2",
 		hands = "Meg. Gloves +2",
 		ring1 = "Ramuh Ring",
@@ -137,8 +144,9 @@ function get_sets()
 		ammo = "Charis Feather",
 		head = "Meghanada Visor +2",
 		neck = "Asperity Necklace",
-		ear1 = "Moonshade Earring",
-		ear2 = "Brutal Earring",
+		-- ear1 = "Moonshade Earring",
+		ear1 = "Brutal Earring",
+		ear2 = "Digni. Earring",
 		body = "Meg. Cuirie +2",
 		hands = "Meg. Gloves +2",
 		ring1 = "Ramuh Ring",
@@ -152,8 +160,9 @@ function get_sets()
 		ammo = "Charis Feather",
 		head = "Mummu Bonnet +2",
 		neck = "Shadow Gorget",
-		ear1 = "Moonshade Earring",
-		ear2 = "Brutal Earring",
+		-- ear1 = "Moonshade Earring",
+		ear1 = "Brutal Earring",
+		ear2 = "Digni. Earring",
 		body = "Mummu Jacket +2",
 		hands = "Meg. Gloves +2",
 		ring1 = "Ramuh Ring",
