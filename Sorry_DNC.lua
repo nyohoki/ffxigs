@@ -1,5 +1,5 @@
 send_command(
-	"wait 10; \
+	"wait 5; \
 	input /lockstyleset 1"
 )
 send_command(
@@ -101,8 +101,8 @@ function get_sets()
 		feet = "Charis Shoes +2"
 	}
 
-	--Aftercast sets
-	-- ?sets
+	-- Aftercast sets
+	-- tp boost set
 	sets.tp_boost = {
 		ear1 = "Moonshade Earring"
 	}
